@@ -1,15 +1,21 @@
 *{
   box-sizing: border-box;
 }
-html,body, main {
+html,body {
   font-family:Roboto, sans-serif;
   line-height: 1.5;
   height: 100%;
 }
+.header{
+    width: 1200px;
+    padding: 0px 15px;
+    margin: 0 auto;
+}
 
 .container__input{
   display:inline-block;
-  width: 300px;
+  margin-top: 20px;
+  /* width: 20%; */
   height: 100%;
   border-style: solid;
   border-left: 0px solid;
@@ -44,14 +50,11 @@ html,body, main {
   .input{
     padding: 8px;
     height: 35px;
-    margin-bottom: 20px;
+    margin-top: 20px;
     margin-left: 50px;
     border-radius: 5px;
     border: 1px solid;
     border-color: grey;
-  }
-  input:first-child {
-    margin-top: 30px;
   }
   .styled__table {
       border-collapse: collapse;
