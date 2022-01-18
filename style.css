@@ -60,6 +60,7 @@ html,body, main {
       min-width: 800px;
       border-spacing: 0;
       border-style: hidden;
+      visibility :hidden;
   }
   table, th, td {
       border-left: 0px solid;
@@ -76,3 +77,4 @@ html,body, main {
 .tr{
 border-bottom: 3px solid #E0E0E0;
 }
+table { empty-cells: hide; }
