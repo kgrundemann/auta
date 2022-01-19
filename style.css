@@ -59,6 +59,7 @@ html,body, main {
       min-width: 800px;
       border-spacing: 0;
       border-style: hidden;
+      visibility:hidden;
   }
   table, th, td {
       border-left: 0px solid;
