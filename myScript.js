@@ -1,10 +1,5 @@
 "use strict"
 
-function showTable(){
-  var table= document.querySelector("table");
-  table.style.visibility = "visible";
- }
-
 function addRow() {
   var marka = document.getElementById("marka").value;
   var model = document.getElementById("model").value;
@@ -22,6 +17,5 @@ function addRow() {
 }
 
 function onClick() {
-  showTable();
   addRow();
 }
