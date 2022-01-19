@@ -6,7 +6,6 @@ html,body, main {
   line-height: 1.5;
   height: 100%;
 }
-
 .container__input{
   display:inline-block;
   width: 300px;
