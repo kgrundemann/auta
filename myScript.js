@@ -2,20 +2,23 @@
 let cars = [];
 
 function validate(newCar) {
-  let success = true;
+  const validateObject = {
+    success:false,
+    toast:"",
+  }
 	if (newCar.marka === "") {
-		alert("Marka nie może być pusta");
-		success =false;
+		validateObject.toast = 'Zawartość pola marka nie może być pusta';
 	}
 	else if (newCar.model === "") {
-		alert("Model nie może być pusty");
-		success =false;
+		validateObject.toast ='Zawartość pola model nie może być pusta';
 	}
 	else if (newCar.kolor === "") {
-		alert("Kolor nie może być pusty");
-		success =false;
+		validateObject.toast = 'Zawartość pola kolor nie może być pusta';
 	}
-	return success;
+  else{
+    validateObject.success=true;
+  }
+	return validateObject;
 }
 
 function addRow(newCar) {
@@ -47,10 +50,13 @@ function onClick() {
 		model: document.getElementById("model").value,
 		kolor: document.getElementById("kolor").value,
 	};
-
-	if (validate(newCar)) {
-		addRow(newCar);
+  const validatedCar=validate(newCar);
+	if(validatedCar.success){
+		addRow(newCar); 
 		addCar(newCar);
 		showTable();
 	}
+  else{
+    toastr.error(validatedCar.toast);
+  }
 }
